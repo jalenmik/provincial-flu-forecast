@@ -9,10 +9,22 @@ header {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     color: #ffffff;
     padding: 1.25rem 2rem;
-    margin: 16px 24px 0 24px; /* Space on top, left, and right */
-    border-radius: 12px; /* Rounded corners */
+    margin: 16px 24px 0 24px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    max-width: 960px; /* Aligns maximum width with main container */
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+transparency {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #ffffff;
+    padding: 1.25rem 2rem;
+    margin: 16px 24px 0 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,19 +35,17 @@ main {
     padding: 40px 24px;
 }
 
-/* --- Visually Grouped Tab Navigation --- */
 .tab-navigation {
     display: flex;
-    gap: 12px; /* Extra spacing between tab buttons */
-    margin-bottom: -1px; /* Overlaps card border to visually group tabs with the plot */
+    gap: 12px;
+    margin-bottom: -1px;
     position: relative;
-    z-index: 1; /* Keeps tabs layered nicely over card border */
+    z-index: 1;
 }
 
-/* --- Larger, Styled Tab Buttons --- */
 .tab-button {
-    padding: 12px 24px; /* Larger hit area */
-    border-radius: 10px 10px 0 0; /* Folder-tab visual style */
+    padding: 12px 24px;
+    border-radius: 10px 10px 0 0;
     border: 1px solid #cbd5e1;
     border-bottom: 1px solid #cbd5e1;
     font-size: 15px;
@@ -53,19 +63,17 @@ main {
     border-color: #c7d2fe;
 }
 
-/* Active State: Connects directly with plot card */
 .tab-button.active {
-    color: #4f46e5; /* Vibrant indigo highlight */
+    color: #4f46e5;
     background-color: #ffffff;
     border-color: #cbd5e1;
-    border-bottom-color: #ffffff; /* Melds tab into the top of the card */
+    border-bottom-color: #ffffff;
     box-shadow: 0 -3px 8px rgba(79, 70, 229, 0.08);
 }
 
-/* --- Plot Card Container --- */
 .plot-card {
     background-color: #ffffff;
-    border-radius: 0 12px 12px 12px; /* Top-left sharp to align with active tab */
+    border-radius: 0 12px 12px 12px;
     border: 1px solid #cbd5e1;
     box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
     padding: 32px;
@@ -112,11 +120,24 @@ footer {
     background-color: #7ea1f4;
     color: #000000;
     padding: 1.25rem 2rem;
-    margin: 0 24px 24px 24px; /* Space on bottom, left, and right */
-    border-radius: 12px; /* Rounded corners */
+    margin: 0 24px 24px 24px;
+    border-radius: 12px;
     font-size: 14px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    max-width: 960px; /* Aligns maximum width with main container */
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+liability {
+    background-color: #7ea1f4;
+    color: #000000;
+    padding: 1.25rem 2rem;
+    margin: 0 24px 24px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }

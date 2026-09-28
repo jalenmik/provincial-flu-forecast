@@ -1,7 +1,7 @@
 import { h, render } from "preact";
 import { useState, useEffect, useRef } from "preact/hooks";
 
-import { Header, Footer } from "./components.js";
+import { Header, Footer, Transparency, Liability } from "./components.js";
 import { loadDataset } from "./data.js";
 import { projplt } from "./plots.js";
 
@@ -9,16 +9,23 @@ const PLOTS = [
     {
         id: "AB",
         label: "Alberta",
-        dataset: "fcast",
+        dataset: "AB_fcast",
         sourceText: "https://www.alberta.ca/stats/dashboard/respiratory-virus-dashboard.htm",
         sourceUrl: "https://www.alberta.ca/stats/dashboard/respiratory-virus-dashboard.htm"
     },
     {
         id: "MB",
         label: "Manitoba",
-        dataset: "sample",
+        dataset: "MB_fcast",
         sourceText: "https://www.gov.mb.ca/health/publichealth/surveillance/influenza/index.html",
         sourceUrl: "https://www.gov.mb.ca/health/publichealth/surveillance/influenza/index.html"
+    },
+    {
+        id: "ON",
+        label: "Ontario",
+        dataset: "ON_fcast",
+        sourceText: "https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/Respiratory-Virus-Tool",
+        sourceUrl: "https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/Respiratory-Virus-Tool"
     }
 ];
 
@@ -40,7 +47,6 @@ function Chart({ dataset }) {
         };
     }, [dataset]);
 
-    // Added class: "chart"
     return h("div", { ref: containerRef, class: "chart" });
 }
 
@@ -51,6 +57,8 @@ function App() {
 
     return h("div", null,
         h(Header),
+
+        h(Transparency),
 
         h("main", null,
             h("nav", { class: "tab-navigation" },
@@ -84,7 +92,9 @@ function App() {
             )
         ),
 
-        h(Footer)
+        h(Footer),
+
+        h(Liability)
     );
 }
 

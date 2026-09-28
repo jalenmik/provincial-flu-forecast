@@ -4,7 +4,7 @@ export function Header() {
     return h("header", null,
         h("h1", null, "Provincial Influenza Forecasts"),
         h("h3", null, "Produced by JBM Advanced Analytics Consulting"),
-        h("p", null, "Updated: 2026-09-20")
+        h("p", null, "Updated: 2026-09-27")
     );
 }
 
@@ -23,6 +23,29 @@ export function Footer() {
         h("p", null, "\u2022 Forecasted hospital census"),
         h("p", null, "\u2022 Breakdown by age group"),
         h("p", null, "\u2022 Breakdown by areas within a province"),
-        h("p", null, "Email jalen@jbmanalytics.ca for any inquiries.")
+        h("p", null, "Email jalen@jbmanalytics.ca for inquiries.")
+    );
+}
+
+export function Transparency() {
+    return h("header", null,
+        h("h3", null, "Intended Use"),
+        h("p", null, `These forecasts are for informational, educational, and
+            research purposes only and do not constitute medical, epidemiological,
+            or public health advice. All results presented are probabilistic in
+            nature; they are a product of computer simulation and machine learning
+            methods, they are not infallible predictions of the future.`)
+    );
+}
+
+export function Liability() {
+    return h("footer", null,
+        h("h3", null, "Liability"),
+        h("p", null, `The data and forecasts are provied "as is" and "as available"
+            without warranties of any kind, either express or implied. The accuracy,
+            completeness, and timeliness of the forecasts cannot be guaranteed. Any
+            liability for any direct, indirect, or consequential damages arising out
+            of the use of - or reliance on - the forecasts presented herein are
+            disclaimed.`)
     );
 }
