@@ -1,6 +1,5 @@
 
 export function projplt(div, dataset) {
-    // 1. Extract and sort x-axis values (dates) and metric arrays
     const sortedData = [...dataset].sort((a, b) => new Date(a.timepoint) - new Date(b.timepoint));
 
     const dates = sortedData.map(d => d.timepoint);
@@ -10,8 +9,6 @@ export function projplt(div, dataset) {
     const admissions = sortedData.map(d => d.hospital_admissions);
     const prevSeason = sortedData.map(d => d.prev_season);
 
-    // 2. Build Ribbon (25th to 75th Percentile)
-    // Lower bound trace (invisible base line)
     const lowerBoundTrace = {
         x: dates,
         y: pct25Values,
@@ -22,20 +19,18 @@ export function projplt(div, dataset) {
         hoverinfo: "skip"
     };
 
-    // Upper bound trace (fills down to lower bound)
     const upperBoundTrace = {
         x: dates,
         y: pct75Values,
         type: "scatter",
         mode: "lines",
         fill: "tonexty",
-        fillcolor: "rgba(79, 70, 229, 0.2)", // Subtle indigo shade
+        fillcolor: "rgba(79, 70, 229, 0.2)",
         line: { color: "transparent" },
         name: "25th - 75th Percentile",
         hoverinfo: "skip"
     };
 
-    // 3. Previous Season Line (Faint line)
     const prevSeasonTrace = {
         x: dates,
         y: prevSeason,
@@ -43,13 +38,13 @@ export function projplt(div, dataset) {
         mode: "lines",
         name: "Previous Season",
         line: {
-            color: "rgba(148, 163, 184, 0.5)", // Faint slate line
+            color: "rgba(148, 163, 184, 0.5)",
             width: 1.5,
             dash: "dot"
-        }
+        },
+        hovertemplate: 'Previous Season: %{y:.0f}<extra></extra>'
     };
 
-    // 4. Median Trace (Solid Line)
     const medianTrace = {
         x: dates,
         y: medValues,
@@ -57,12 +52,12 @@ export function projplt(div, dataset) {
         mode: "lines",
         name: "Median Forecast",
         line: {
-            color: "#4f46e5", // Accent indigo color
+            color: "#4f46e5",
             width: 2.5
-        }
+        },
+        hovertemplate: 'Forecast Median: %{y:.0f}<extra></extra>'
     };
 
-    // 5. Hospital Admissions (Points)
     const admissionsTrace = {
         x: dates,
         y: admissions,
@@ -70,15 +65,15 @@ export function projplt(div, dataset) {
         mode: "markers",
         name: "Hospital Admissions",
         marker: {
-            color: "#0f172a", // Dark slate dots
+            color: "#0f172a",
             size: 7
-        }
+        },
+        hovertemplate: 'Hospital Admissions: %{y:.0f}<extra></extra>'
     };
 
-    // 6. Layout Configuration
     const layout = {
         xaxis: {
-            title: { text: "Date" },
+            title: { text: "Date (Last Day of Reporting Week)" },
             type: "date"
         },
         yaxis: {
@@ -94,7 +89,6 @@ export function projplt(div, dataset) {
         }
     };
 
-    // 7. Render Plot
     const traces = [lowerBoundTrace, upperBoundTrace, prevSeasonTrace, medianTrace, admissionsTrace];
     Plotly.newPlot(div, traces, layout, { responsive: true });
 }

@@ -1,7 +1,7 @@
 import { h, render } from "preact";
 import { useState, useEffect, useRef } from "preact/hooks";
 
-import { Header, Footer, Transparency, Liability } from "./components.js";
+import { Header, Footer, Transparency} from "./components.js";
 import { loadDataset } from "./data.js";
 import { projplt } from "./plots.js";
 
@@ -52,7 +52,6 @@ function Chart({ dataset }) {
 
 function App() {
     const [activeTabId, setActiveTabId] = useState(PLOTS[0].id);
-
     const currentPlot = PLOTS.find((plot) => plot.id === activeTabId) || PLOTS[0];
 
     return h("div", null,
@@ -79,22 +78,32 @@ function App() {
                     dataset: currentPlot.dataset
                 }),
 
-                // Data Source with Hyperlink
-                h("p", { class: "data-source" },
-                    "Data Source: ",
-                    h("a", {
-                        href: currentPlot.sourceUrl,
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        class: "data-source-link"
-                    }, currentPlot.sourceText)
+                h("div", { class: "data-source-banner" },
+                    h("p", { class: "data-source-note" }, 
+                        `Admissions are a strong indicator of flu activity.
+                        For each admission, there are typically many more cases,
+                        and even more infectious people in the given population.
+                        An increase in admissions generally indicates an increase
+                        in overall flu activity.`
+                    ),
+                    h("p", { class: "data-source-note" }, 
+                        h("strong", null, "Note: "), 
+                        `Data points may be corrected upward after initial reporting.`
+                    ),
+                    h("p", { class: "data-source-text" },
+                        h("strong", null, "Data Source: "),
+                        h("a", {
+                            href: currentPlot.sourceUrl,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            class: "data-source-link"
+                        }, currentPlot.sourceText)
+                    )
                 )
             )
         ),
 
-        h(Footer),
-
-        h(Liability)
+        h(Footer)
     );
 }
 
