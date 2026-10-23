@@ -1,97 +1,106 @@
 [
   {
     "timepoint": "2026-08-29",
-    "pct25": 4.3344,
-    "med": 5.5155,
-    "pct75": 6.941,
+    "pct25": 4.2633,
+    "med": 5.4941,
+    "pct75": 7.0096,
     "week": 1,
     "prev_season": 5,
     "hospital_admissions": 5
   },
   {
     "timepoint": "2026-09-05",
-    "pct25": 10.2191,
-    "med": 12.6711,
-    "pct75": 15.1439,
+    "pct25": 9.8706,
+    "med": 12.3502,
+    "pct75": 14.7421,
     "week": 2,
     "prev_season": 8,
     "hospital_admissions": 13
   },
   {
     "timepoint": "2026-09-12",
-    "pct25": 23.004,
-    "med": 26.3916,
-    "pct75": 29.898,
+    "pct25": 23.5985,
+    "med": 26.3549,
+    "pct75": 28.8937,
     "week": 3,
     "prev_season": 7,
     "hospital_admissions": 31
   },
   {
     "timepoint": "2026-09-19",
-    "pct25": 33.2572,
-    "med": 36.9155,
-    "pct75": 40.9311,
+    "pct25": 33.5656,
+    "med": 36.8809,
+    "pct75": 40.5214,
     "week": 4,
     "prev_season": 9,
     "hospital_admissions": 36
   },
   {
     "timepoint": "2026-09-26",
-    "pct25": 44.1268,
-    "med": 48.9962,
-    "pct75": 53.8921,
+    "pct25": 44.3808,
+    "med": 48.9814,
+    "pct75": 53.9234,
     "week": 5,
     "prev_season": 12,
     "hospital_admissions": 48
   },
   {
     "timepoint": "2026-10-03",
-    "pct25": 53.2626,
-    "med": 58.5482,
-    "pct75": 63.7483,
+    "pct25": 53.6169,
+    "med": 58.8182,
+    "pct75": 63.8963,
     "week": 6,
     "prev_season": 7,
     "hospital_admissions": 56
   },
   {
     "timepoint": "2026-10-10",
-    "pct25": 53.0044,
-    "med": 66.7611,
-    "pct75": 87.4643,
+    "pct25": 41.2867,
+    "med": 45.3701,
+    "pct75": 48.9733,
     "week": 7,
     "prev_season": 7,
     "hospital_admissions": 42
   },
   {
     "timepoint": "2026-10-17",
-    "pct25": 83.0655,
-    "med": 130.2222,
-    "pct75": 196.8483,
+    "pct25": 64.9695,
+    "med": 70.3749,
+    "pct75": 75.7217,
     "week": 8,
-    "prev_season": 12
+    "prev_season": 12,
+    "hospital_admissions": 77
   },
   {
     "timepoint": "2026-10-24",
-    "pct25": 98.1113,
-    "med": 179.4885,
-    "pct75": 323.4557,
+    "pct25": 77.3066,
+    "med": 90.1527,
+    "pct75": 107.0948,
     "week": 9,
     "prev_season": 17
   },
   {
     "timepoint": "2026-10-31",
-    "pct25": 113.955,
-    "med": 248.4285,
-    "pct75": 556.2873,
+    "pct25": 86.5339,
+    "med": 112.3321,
+    "pct75": 153.4656,
     "week": 10,
     "prev_season": 16
   },
   {
     "timepoint": "2026-11-07",
-    "pct25": 125.4513,
-    "med": 354.4299,
-    "pct75": 898.8814,
+    "pct25": 89.8576,
+    "med": 143.1354,
+    "pct75": 223.0723,
     "week": 11,
     "prev_season": 63
+  },
+  {
+    "timepoint": "2026-11-14",
+    "pct25": 97.884,
+    "med": 186.6022,
+    "pct75": 327.3128,
+    "week": 12,
+    "prev_season": 108
   }
 ]
