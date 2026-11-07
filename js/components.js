@@ -7,7 +7,7 @@ export function Header() {
             h("p", { class: "header-subtitle" }, "Produced by JBM Advanced Analytics Consulting Inc.")
         ),
         h("div", { class: "header-meta" },
-            h("span", { class: "meta-badge" }, "Updated: 2026-10-30")
+            h("span", { class: "meta-badge" }, "Updated: 2026-11-07")
         )
     );
 }
