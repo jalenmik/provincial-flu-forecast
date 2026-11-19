@@ -1,6 +1,7 @@
 export async function loadDataset(name) {
 
-    const response = await fetch(`./data/${name}.json`, {
+    const DATA_DATE = "2026-11-19";
+    const response = await fetch(`./data/${name}${DATA_DATE}.json`, {
         cache: 'no-store'
     });
 
